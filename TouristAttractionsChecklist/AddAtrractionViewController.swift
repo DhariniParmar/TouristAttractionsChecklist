@@ -8,21 +8,23 @@
 
 import UIKit
 
-//protocol AddAtrractionVCDelegate: Class {
-//
-//    func addAtrractionVCDidCancel()
-//    func addAtrractionVc( _ control: AddAtrractionViewController,
-//                          didFinishAdd item: ChecklistItem)
-//    func itemDetailsVC( _ control: AddAtrractionViewController,
-//                        didFinishEdit item: ChecklistItem)
-//
-//}
+
+protocol AddAtrractionVCDelegate: class {
+
+    func addAtrractionVCDidCancel()
+    func addAtrractionVC( _ control: AddAtrractionViewController,
+                          didFinishAdd item: ChecklistItem)
+    func addAttractionVC( _ control: AddAtrractionViewController,
+                        didFinishEdit item: ChecklistItem)
+
+}
 
 class AddAtrractionViewController: UITableViewController {
     
-    
-
     @IBOutlet weak var textfield: UITextField!
+    
+    weak var delegate:AddAtrractionVCDelegate?
+      var itemtoEdit:ChecklistItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +55,28 @@ class AddAtrractionViewController: UITableViewController {
     }
 
     
-    
     @IBAction func done(_ sender: UIBarButtonItem) {
          //print("Contents of the text field: \(textfield.text!)")
-        
-        let text = textfield.text!
-        
-        let item = ChecklistItem(text:text, checked:false)
+        //if edit, extract the text, call delegate method FinishedEditing otherwise do add new item
+        if let item = itemtoEdit {
+            item.text = textfield.text!
+            delegate?.addAtrractionVC(self, didFinishAdd: item)
+        } else {
+            //extract the textfield content
+            let text = textfield.text!
+            //make a new checklistitem object
+            let item = ChecklistItem(text:text, checked:false)
+            //send it back to the upper stream VC
+            delegate?.addAtrractionVC(self, didFinishAdd: item)
+        }
+       
         
         //navigationController?.popViewController(animated: true)
     }
     
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
+       delegate?.addAtrractionVCDidCancel()
     }
     // MARK: - Table view data source
 
