@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5E5B2A20211F9C00CE65B7 /* AddAtrractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E5B2920211F9C00CE65B7 /* AddAtrractionViewController.swift */; };
+		3F5E5B2C20214CD100CE65B7 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E5B2B20214CD100CE65B7 /* ChecklistItem.swift */; };
 		3FE19157201FC2E900453F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE19156201FC2E900453F3C /* AppDelegate.swift */; };
-		3FE19159201FC2E900453F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE19158201FC2E900453F3C /* ViewController.swift */; };
 		3FE1915C201FC2E900453F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1915A201FC2E900453F3C /* Main.storyboard */; };
 		3FE1915E201FC2E900453F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1915D201FC2E900453F3C /* Assets.xcassets */; };
 		3FE19161201FC2E900453F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1915F201FC2E900453F3C /* LaunchScreen.storyboard */; };
 		3FE1916C201FC2EA00453F3C /* TouristAttractionsChecklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1916B201FC2EA00453F3C /* TouristAttractionsChecklistTests.swift */; };
 		3FE19177201FC2EA00453F3C /* TouristAttractionsChecklistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE19176201FC2EA00453F3C /* TouristAttractionsChecklistUITests.swift */; };
+		3FE19185201FC39200453F3C /* ChecklistTouristPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE19184201FC39200453F3C /* ChecklistTouristPlacesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5E5B2920211F9C00CE65B7 /* AddAtrractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAtrractionViewController.swift; sourceTree = "<group>"; };
+		3F5E5B2B20214CD100CE65B7 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		3FE19153201FC2E900453F3C /* TouristAttractionsChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouristAttractionsChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE19156201FC2E900453F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FE19158201FC2E900453F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FE1915B201FC2E900453F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE1915D201FC2E900453F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE19160201FC2E900453F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		3FE19172201FC2EA00453F3C /* TouristAttractionsChecklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouristAttractionsChecklistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE19176201FC2EA00453F3C /* TouristAttractionsChecklistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristAttractionsChecklistUITests.swift; sourceTree = "<group>"; };
 		3FE19178201FC2EA00453F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE19184201FC39200453F3C /* ChecklistTouristPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTouristPlacesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				3FE19156201FC2E900453F3C /* AppDelegate.swift */,
-				3FE19158201FC2E900453F3C /* ViewController.swift */,
 				3FE1915A201FC2E900453F3C /* Main.storyboard */,
+				3FE19184201FC39200453F3C /* ChecklistTouristPlacesViewController.swift */,
 				3FE1915D201FC2E900453F3C /* Assets.xcassets */,
 				3FE1915F201FC2E900453F3C /* LaunchScreen.storyboard */,
 				3FE19162201FC2E900453F3C /* Info.plist */,
+				3F5E5B2920211F9C00CE65B7 /* AddAtrractionViewController.swift */,
+				3F5E5B2B20214CD100CE65B7 /* ChecklistItem.swift */,
 			);
 			path = TouristAttractionsChecklist;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE19159201FC2E900453F3C /* ViewController.swift in Sources */,
+				3F5E5B2A20211F9C00CE65B7 /* AddAtrractionViewController.swift in Sources */,
+				3FE19185201FC39200453F3C /* ChecklistTouristPlacesViewController.swift in Sources */,
 				3FE19157201FC2E900453F3C /* AppDelegate.swift in Sources */,
+				3F5E5B2C20214CD100CE65B7 /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
